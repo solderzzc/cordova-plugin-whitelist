@@ -28,7 +28,7 @@
 
     <engines>
       <engine name="cordova-android" version=">=4.0.0-dev" />
-      <engine name="cordova-ios" version=">=4.0.0-dev" />
+      <!--<engine name="cordova-ios" version=">=4.0.0-dev" />-->
     </engines>
 
     <platform name="android">
@@ -46,6 +46,7 @@
         </js-module>
     </platform>
 
+    <!--
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="Whitelist">
@@ -60,5 +61,6 @@
             <runs />
         </js-module>
     </platform>
+    -->
 
 </plugin>
