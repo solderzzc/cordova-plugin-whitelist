@@ -110,6 +110,7 @@ public class WhitelistPlugin extends CordovaPlugin {
 
     @Override
     public Boolean shouldAllowNavigation(String url) {
+        return true;
         if (allowedNavigations.isUrlWhiteListed(url)) {
             return true;
         }
@@ -118,6 +119,7 @@ public class WhitelistPlugin extends CordovaPlugin {
 
     @Override
     public Boolean shouldAllowRequest(String url) {
+        return true;
         if (Boolean.TRUE == shouldAllowNavigation(url)) {
             return true;
         }
@@ -129,6 +131,7 @@ public class WhitelistPlugin extends CordovaPlugin {
 
     @Override
     public Boolean shouldOpenExternalUrl(String url) {
+        return true;
         if (allowedIntents.isUrlWhiteListed(url)) {
             return true;
         }
