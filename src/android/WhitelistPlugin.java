@@ -46,12 +46,9 @@ public class WhitelistPlugin extends CordovaPlugin {
         new CustomConfigXmlParser().parse(xmlParser);
     }
     public WhitelistPlugin(Whitelist allowedNavigations, Whitelist allowedIntents, Whitelist allowedRequests) {
-        if (allowedRequests == null) {
-            allowedRequests = new Whitelist();
-            allowedRequests.addWhiteListEntry("file:///*", false);
-            allowedRequests.addWhiteListEntry("data:*", false);
-        }
-        this.allowedNavigations = allowedNavigations;
+        allowedRequests = new Whitelist();
+        allowedRequests.addWhiteListEntry("*", true);
+        this.allowedNavigations = allowedRequests;
         this.allowedIntents = allowedIntents;
         this.allowedRequests = allowedRequests;
     }
